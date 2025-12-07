@@ -811,21 +811,41 @@ font-size: 0.675rem;
     .dashboard-card{
         max-width: 320px;
     }
-     .col-lg-4:nth-child(1) .card-body-custom{
-   padding: 1rem;
-    -webkit-overflow-scrolling: touch;
-     z-index: 1;                 
+  .dashboard-card:first-child .card-body-custom {
+    height: 100vh;
+    height: -webkit-fill-available;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y ;
+   overscroll-behavior-y: contain;
+    padding: 1.5rem 1rem;
+      position: relative;
+  z-index: 1;                 
   pointer-events: auto !important;
-   overscroll-behavior: contain !important;
-    position: relative;
+ box-sizing: border-box;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: scroll-position;
   }
-   .col-lg-4:nth-child(2) .card-body-custom{
-   padding: 1rem;
-    -webkit-overflow-scrolling: touch;
-     z-index: 1;                 
+
+  
+  .dashboard-card:nth-child(2) .card-body-custom {
+     height: 100vh;
+    height: -webkit-fill-available;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y ;
+   overscroll-behavior-y: contain;
+    padding: 1.5rem 1rem;
+      position: relative;
+  z-index: 1;               
   pointer-events: auto !important;
-   overscroll-behavior: contain !important;
-    position: relative;
+ box-sizing: border-box;
+
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: scroll-position;
   }
   .col-lg-4:nth-child(1) .card-body-custom::-webkit-scrollbar-thumb,
 .col-lg-4:nth-child(2) .card-body-custom::-webkit-scrollbar-thumb {
