@@ -23,6 +23,7 @@ body {
    font-family: "Cairo",sans-serif;
     color: var(--text-dark);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -391,15 +392,7 @@ body {
     
 }
 
-.col-lg-4:nth-child(1) .card-body-custom {
-    display: block;
-    max-height: 200px;
-    overflow-y: auto;
-    /* padding: 1rem; */
-    padding-right: 0.5rem;
-    
-    
-}
+
 .col-lg-4:nth-child(1) .card-body-custom .employee-name {
 font-size: 0.675rem;
 }
@@ -408,11 +401,18 @@ font-size: 0.675rem;
     color: #0A003D;
    font-weight: 400;
 }
+.col-lg-4:nth-child(1) .card-body-custom {
+    display: block;
+    max-height: 200px;
+    overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
+    padding-right: 0.5rem; 
+}
 .col-lg-4:nth-child(2) .card-body-custom {
     display: block;
     max-height: 200px;
     overflow-y: auto;
-    /* padding: 1rem; */
+   -webkit-overflow-scrolling: touch;
     padding-right: 0.5rem;
     padding-top: 0.25rem;
     
@@ -652,6 +652,48 @@ font-size: 0.675rem;
         justify-content: space-between;
         align-items: center;
     }
+    .card-count {
+        transform: translateX(-176px) !important;
+    }
+ html, body { height: 100%; overflow: hidden; }
+  
+  
+ .dashboard-card:first-child .card-body-custom {
+    height: 100vh;
+    height: -webkit-fill-available;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y ;
+   overscroll-behavior-y: contain;
+    padding: 1.5rem 1rem;
+      position: relative;
+  z-index: 1;                 
+  pointer-events: auto !important;
+ box-sizing: border-box;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: scroll-position;
+  }
+
+  
+  .dashboard-card:nth-child(2) .card-body-custom {
+     height: 100vh;
+    height: -webkit-fill-available;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y ;
+   overscroll-behavior-y: contain;
+    padding: 1.5rem 1rem;
+      position: relative;
+  z-index: 1;               
+  pointer-events: auto !important;
+ box-sizing: border-box;
+
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: scroll-position;
+  }
 }
 
 .menu-toggle {
@@ -688,7 +730,7 @@ font-size: 0.675rem;
     .sidebar {
         transform: translateX(-100%);
         transition: var(--transition);
-        
+        width: 67%;
     }
     
     .sidebar-checkbox:checked ~ .sidebar {
@@ -723,16 +765,18 @@ font-size: 0.675rem;
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .dashboard-card {
+        max-width: 500px;
+        max-height: 400px;
+    }
+   
+
 }
 
 @media (max-width: 767.98px) {
     .dashboard-content {
         padding: 1rem;
     }
-    
-    /* .header-center .portal-title {
-        font-size: 0.85rem !important;
-    } */
     
     .employee-details .detail-text {
         display: none;
@@ -764,4 +808,30 @@ font-size: 0.675rem;
     .header-right .user-profile{
         margin-right: -21px;
     }
+    .dashboard-card{
+        max-width: 320px;
+    }
+     .col-lg-4:nth-child(1) .card-body-custom{
+   padding: 1rem;
+    -webkit-overflow-scrolling: touch;
+     z-index: 1;                 
+  pointer-events: auto !important;
+   overscroll-behavior: contain !important;
+    position: relative;
+  }
+   .col-lg-4:nth-child(2) .card-body-custom{
+   padding: 1rem;
+    -webkit-overflow-scrolling: touch;
+     z-index: 1;                 
+  pointer-events: auto !important;
+   overscroll-behavior: contain !important;
+    position: relative;
+  }
+  .col-lg-4:nth-child(1) .card-body-custom::-webkit-scrollbar-thumb,
+.col-lg-4:nth-child(2) .card-body-custom::-webkit-scrollbar-thumb {
+    background: #0A003D;
+    border-radius: 3px;
+    cursor: pointer;
 }
+}
+
