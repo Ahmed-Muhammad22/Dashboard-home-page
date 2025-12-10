@@ -405,14 +405,16 @@ font-size: 0.675rem;
     display: block;
     max-height: 200px;
     overflow-y: auto;
-   -webkit-overflow-scrolling: touch;
+     touch-action: pan-y;
+    overscroll-behavior-y: contain;
     padding-right: 0.5rem; 
 }
 .col-lg-4:nth-child(2) .card-body-custom {
     display: block;
     max-height: 200px;
     overflow-y: auto;
-   -webkit-overflow-scrolling: touch;
+     touch-action: pan-y;
+    overscroll-behavior-y: contain;
     padding-right: 0.5rem;
     padding-top: 0.25rem;
     
@@ -662,14 +664,16 @@ font-size: 0.675rem;
     display: block;
     max-height: 200px;
     overflow-y: auto;
-   -webkit-overflow-scrolling: touch;
+     touch-action: pan-y;
+    overscroll-behavior-y: contain;
     padding-right: 0.5rem; 
 }
 .col-lg-4:nth-child(2) .card-body-custom {
     display: block;
     max-height: 200px;
     overflow-y: auto;
-   -webkit-overflow-scrolling: touch;
+     touch-action: pan-y;
+    overscroll-behavior-y: contain;
     padding-right: 0.5rem;
     padding-top: 0.25rem;
     
@@ -693,16 +697,11 @@ font-size: 0.675rem;
     background: var(--bg-light);
 }
 
-.col-lg-4:nth-child(1) .card-body-custom::-webkit-scrollbar-thumb,
-.col-lg-4:nth-child(2) .card-body-custom::-webkit-scrollbar-thumb {
-    background: #0A003D;
-    border-radius: 3px;
-    cursor: pointer;
-}
+
 
 .menu-toggle {
     font-size: 1.5rem;
-    color: var(--text-dark);
+    color: #7D21FE;
     padding: 0.25rem 0.5rem;
     margin-right: 0.5rem;
     cursor: pointer;
@@ -735,6 +734,7 @@ font-size: 0.675rem;
         transform: translateX(-100%);
         transition: var(--transition);
         width: 67%;
+        height: 100%;
     }
     
     .sidebar-checkbox:checked ~ .sidebar {
@@ -747,7 +747,9 @@ font-size: 0.675rem;
         margin-left: 0;
         
     }
-    
+    .dashboard-content{
+        margin-left: 195px;
+    }
     .top-header {
         padding: 0 1rem;
     }
@@ -772,10 +774,28 @@ font-size: 0.675rem;
     }
     .dashboard-card {
         max-width: 500px;
-        max-height: 400px;
+        max-height: 400px;   
     }
-   
-
+   .col-lg-4:nth-child(1) .card-body-custom  .employee-name,
+   .col-lg-4:nth-child(2) .card-body-custom .employee-name {
+font-size: 0.875rem;
+}
+ .col-lg-4:nth-child(1) .card-body-custom .employee-date, 
+  .col-lg-4:nth-child(2) .card-body-custom .employee-date {
+    font-size: 0.95rem;
+}
+.col-lg-4:nth-child(1) .card-body-custom .detail-text,
+.col-lg-4:nth-child(2) .card-body-custom .detail-text {
+    font-size: 0.95rem;
+}
+   .col-lg-4:nth-child(1) .card-body-custom .employee-item,
+   .col-lg-4:nth-child(2) .card-body-custom .employee-item{
+    max-width: 480px;
+   }
+ .col-lg-4:nth-child(1) .card-body-custom::-webkit-scrollbar,
+.col-lg-4:nth-child(2) .card-body-custom::-webkit-scrollbar {
+    width: 8px;
+}
 }
 
 @media (max-width: 767.98px) {
@@ -820,18 +840,34 @@ font-size: 0.675rem;
     display: block;
     max-height: 200px;
     overflow-y: auto;
-   -webkit-overflow-scrolling: touch;
+     touch-action: pan-y;
+    overscroll-behavior-y: contain;
     padding-right: 0.5rem; 
 }
 .col-lg-4:nth-child(2) .card-body-custom {
     display: block;
     max-height: 200px;
     overflow-y: auto;
-   -webkit-overflow-scrolling: touch;
+     touch-action: pan-y;
+    overscroll-behavior-y: contain;
     padding-right: 0.5rem;
     padding-top: 0.25rem;
     
     
+}
+   .col-lg-4:nth-child(1) .card-body-custom .employee-item,
+   .col-lg-4:nth-child(2) .card-body-custom .employee-item{
+    max-width: 480px;
+   }
+ .col-lg-4:nth-child(1) .card-body-custom::-webkit-scrollbar,
+.col-lg-4:nth-child(2) .card-body-custom::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+.col-lg-4:nth-child(1) .card-body-custom::-webkit-scrollbar-track,
+.col-lg-4:nth-child(2) .card-body-custom::-webkit-scrollbar-track {
+    background: var(--bg-light);
 }
   .col-lg-4:nth-child(1) .card-body-custom::-webkit-scrollbar-thumb,
 .col-lg-4:nth-child(2) .card-body-custom::-webkit-scrollbar-thumb {
@@ -839,5 +875,7 @@ font-size: 0.675rem;
     border-radius: 3px;
     cursor: pointer;
 }
+
+
 }
 
