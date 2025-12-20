@@ -1,282 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
-    <title>RookieRisePortal</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-    <!--& ========== google fonts ========== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-     <!--& ========== Start Bootstrap Css ========== -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-     <!-- Font Awesome for icons -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
-    <link href="./css/dashboard.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RookieRise Portal Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap LTR Version -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
 <body>
+
+    <!-- Sidebar Toggle Checkbox -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
+    <label for="sidebar-toggle" class="sidebar-overlay"></label>
+
     <div class="wrapper">
-        <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox">
-    <label for="sidebar-toggle" class="sidebar-overlay d-lg-none"></label>
-    
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <div class="logo">
-               <img src="./images/logo.png">
-            </div>
-            <label for="sidebar-toggle" class="sidebar-close">
-                <i class="bi bi-x-lg"></i>
-            </label>
-        </div>
         
-        <nav class="sidebar-nav">
-            <ul class="nav flex-column">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                   <img src="./images/logo.png" alt="Logo">
+                </div>
+                <label for="sidebar-toggle" class="sidebar-close d-lg-none">
+                    <i class="bi bi-x-lg"></i>
+                </label>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <input type="checkbox" id="accountMenu" class="submenu-checkbox">
+                        <label for="accountMenu" class="nav-link">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Account Setting</span>
+                            <i class="bi bi-chevron-down submenu-arrow"></i>
+                        </label>
+                        <ul class="nav flex-column submenu">
+                            <li class="nav-item"><a href="#" class="nav-link">Account Info</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <input type="checkbox" id="archivingMenu" class="submenu-checkbox">
+                        <label for="archivingMenu" class="nav-link">
+                            <i class="bi bi-archive"></i>
+                            <span>Archiving</span>
+                            <i class="bi bi-chevron-down submenu-arrow"></i>
+                        </label>
+                        <ul class="nav flex-column submenu">
+                            <li class="nav-item"><a href="#" class="nav-link">Document types</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <input type="checkbox" id="hrMenu" class="submenu-checkbox">
+                        <label for="hrMenu" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Human Resources</span>
+                            <i class="bi bi-chevron-down submenu-arrow"></i>
+                        </label>
+                        <ul class="nav flex-column submenu">
+                            <li class="nav-item active-sub"><a href="#" class="nav-link">Employees</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Employee Requests</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Manage Roles</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Vacation types</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Work years</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Official Vacations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <input type="checkbox" id="requestsMenu" class="submenu-checkbox">
+                        <label for="requestsMenu" class="nav-link">
+                            <i class="fas fa-tasks"></i>
+                            <span>Requests</span>
+                            <i class="bi bi-chevron-down submenu-arrow"></i>
+                        </label>
+                        <ul class="nav flex-column submenu">
+                            <li class="nav-item"><a href="#" class="nav-link">Vacation Requests</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-                <!-- Dashboard -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">
-                        <i class="bi bi-grid-1x2-fill"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-
-                <!-- Account Setting -->
-                <li class="nav-item has-submenu">
-                    <input type="checkbox" id="accountMenu" class="submenu-checkbox">
-                    <label for="accountMenu" class="nav-link">
-                        <i class="fas fa-user-cog"></i>
-                        <span>Account Setting</span>
-                        <i class="bi bi-chevron-down ms-auto submenu-arrow"></i>
-                    </label>
-                    <ul class="nav flex-column submenu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Account Info</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <!-- Archiving -->
-                <li class="nav-item has-submenu">
-                    <input type="checkbox" id="archivingMenu" class="submenu-checkbox">
-                    <label for="archivingMenu" class="nav-link">
-                        <i class="bi bi-archive"></i>
-                        <span>Archiving</span>
-                        <i class="bi bi-chevron-down ms-auto submenu-arrow"></i>
-                    </label>
-                    <ul class="nav flex-column submenu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Document types</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <!-- Human Resources -->
-                <li class="nav-item has-submenu">
-                    <input type="checkbox" id="hrMenu" class="submenu-checkbox">
-                    <label for="hrMenu" class="nav-link">
-                        <i class="fas fa-users"></i>
-                        <span>Human Resources</span>
-                        <i class="bi bi-chevron-down ms-auto submenu-arrow"></i>
-                    </label>
-                    <ul class="nav flex-column submenu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link position-relative">
-                                <span class="badge-dot"></span> Employees
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Employee Requests</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Manage Roles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Vacation types</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Work years</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Official Vacations</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <!-- Requests -->
-                <li class="nav-item has-submenu">
-                    <input type="checkbox" id="requestsMenu" class="submenu-checkbox">
-                    <label for="requestsMenu" class="nav-link">
-                        <i class="fas fa-tasks"></i>
-                        <span>Requests</span>
-                        <i class="bi bi-chevron-down ms-auto submenu-arrow"></i>
-                    </label>
-                    <ul class="nav flex-column submenu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Vacation Requests</a>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-        </nav>
-    </aside>
-
+        <!-- Main Content Area -->
         <div class="main-content">
+            
+            <!-- Top Header -->
             <header class="top-header">
-                <div class="header-left">
-                    <label for="sidebar-toggle" class="menu-toggle d-lg-none">
-                        <i class="bi bi-list"></i>
+                <div class="header-left d-flex align-items-center">
+                    <!-- Mobile Toggle Button -->
+                    <label for="sidebar-toggle" class="d-lg-none me-3 cursor-pointer">
+                        <i class="bi bi-list fs-3 text-purple"></i>
                     </label>
-                    <div class="language-switcher">
+                    
+                    <!-- Language Switcher -->
+                    <a href="./dashboard.ar.html" class="lang-switch d-flex align-items-center" >
                         <span>العربية</span>
-                        <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" class="flag-icon">
+                        <img src="https://flagcdn.com/w20/eg.png" alt="EG" class="ms-2">
+                    </a>
+                </div>
+
+                <div class="page-title d-none d-md-block">RookieRise Portal Panel</div>
+
+                <div class="header-right d-flex align-items-center">
+                    <i class="bi bi-bell-fill bell fs-5 ms-3 cursor-pointer"></i>
+                    
+                    <div class="user-profile">
+                        <!-- Checkbox -->
+                        <input type="checkbox" id="user-dropdown-toggle" class="dropdown-checkbox">
+                        
+                        <!-- Label Button -->
+                        <label for="user-dropdown-toggle" class="user-dropdown-btn d-flex align-items-center cursor-pointer">
+                            
+                            <!-- Avatar -->
+                            <div class="avatar-circle">SY</div>
+
+                            <!-- User Info -->
+                            <div class="user-info text-start ms-2 d-none d-sm-block">
+                                <span class="user-name fw-semibold">sumerage</span>
+                                <span class="user-email small d-block">yasmeen@gmail.com</span>
+                            </div>
+
+                            <!-- Arrow -->
+                            <i class="fa-solid fa-caret-down dropdown-arrow ms-3"></i>
+                        </label>
+
+                        <!-- Dropdown Menu -->
+                        <ul class="custom-dropdown-menu">
+                            <li>
+                                <a href="#" class="d-flex align-items-center text-dark text-decoration-none p-2 rounded hover-bg">
+                                    <i class="bi bi-key me-3 text-purple"></i> 
+                                    <span>Change Password</span>
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <hr class="dropdown-divider my-1">
+                            </li> -->
+                            <li>
+                                <a href="#" class="d-flex align-items-center text-danger text-decoration-none p-2 rounded hover-bg">
+                                    <i class="bi bi-box-arrow-left me-3"></i> 
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="header-center">
-                    <h1 class="portal-title">Rookierise Portal Panel</h1>
-                </div>
-                <div class="header-right">
-     <i class="bi bi-bell bell cursor-pointer"></i>
-
-    <!-- User Dropdown -->
-    <div class="user-profile">
-        <input type="checkbox" id="user-dropdown-toggle" class="dropdown-checkbox">
-        <label for="user-dropdown-toggle" class="user-dropdown-btn d-flex align-items-center cursor-pointer">
-            <div class="user-avatar me-2">
-                <span>SY</span>
-            </div>
-            <div class="user-info text-start">
-                <span class="user-name fw-semibold">sumerage</span>
-                <span class="user-email small d-block">yasmeen.haled8279@gmail.com</span>
-            </div>
-            <i class="fa-solid fa-caret-down dropdown-arrow ms-3"></i>
-        </label>
-
-        
-        <ul class="dropdown-menu dropdown-menu-end mt-3">
-            <li>
-                <a class="dropdown-item" href="#">
-                    <i class="bi bi-key me-3"></i> <span>Change Password</span>
-                </a>
-            </li>
-            <li>
-                <a class="dropdown-item text-danger" href="#">
-                    <i class="bi bi-box-arrow-left me-3"></i> <span>Logout</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
             </header>
 
-            <main class="dashboard-content">
-                <div class="container">
-                    <h2 class="page-title">Dashboard</h2>
-                
+            <!-- Dashboard Content -->
+            <div class="container-fluid p-4 dashboard-body">
+                <h2 class="text-start">Dashboard</h2>
+
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+
+                    <!-- Card 1: Who's off -->
+                    <div class="col-12 col-lg-6 col-xl-4">
                         <div class="card-header-custom">
-                                <i class="bi bi-person-x"></i>
-                                <h3 class="card-title-custom">Who's off</h3>
-                                <span class="card-count">3 Employees</span>
+                            <div class="d-flex align-items-center head">
+                                <div class="icon-box-header">
+                                    <i class="bi bi-person-x"></i>
+                                </div>
+                                <span class="fw-bold">Who's off</span>
                             </div>
+                            <span class="badge-count">3 Employees</span>
+                        </div>
                         <div class="dashboard-card">
-                            
-                            <div class="card-body-custom">
-                                <div class="employee-item">
-                                    <div class="employee-avatar">
-                                        <img src="https://i.pravatar.cc/40?img=1" alt="Ahmed Mohamed">
-                                    </div>
-                                    <div class="employee-info">
-                                        <span class="employee-name">Ahmed Mohamed</span>
-                                        <span class="employee-date">26-7-2025</span>
+                            <div class="card-content scrollable-list">
+                                <!-- User 1 -->
+                                <div class="list-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://i.pravatar.cc/150?img=11" class="list-avatar">
+                                        <div class="text-details ms-2">
+                                            <h6>Ahmed Mohamed</h6>
+                                            <span>26-7-2025</span>
+                                        </div>
                                     </div>
                                     <div class="employee-details">
-                                       <i class="ms-auto  icon">🏝️</i>
+                                        <div class="status">
+                                            <i class="fas fa-umbrella-beach"></i>
+                                        </div>
                                         <span class="detail-text">Annual vacation</span>
-                                       
                                     </div>
                                 </div>
-                                <div class="employee-item">
-                                    <div class="employee-avatar">
-                                        <img src="https://i.pravatar.cc/40?img=3" alt="Mohamed Ali">
-                                    </div>
-                                    <div class="employee-info">
-                                        <span class="employee-name">Mohamed Ali</span>
-                                        <span class="employee-date">20-7-2025</span>
+                                <!-- User 2 -->
+                                <div class="list-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://i.pravatar.cc/150?img=13" class="list-avatar">
+                                        <div class="text-details ms-2">
+                                            <h6>Mohamed Ali</h6>
+                                            <span>20-7-2025</span>
+                                        </div>
                                     </div>
                                     <div class="employee-details">
-                                        <i class="bi bi-airplane icon ms-auto"></i>
-                                        <span class="detail-text">Annual vacation, Emergency</span>
-                                        
+                                        <div class="status-icon">
+                                            <i class="fa-solid fa-plane-up"></i>
+                                        </div>
+                                        <span class="detail-text">Annual vacations Emergency</span>
                                     </div>
                                 </div>
-                                <div class="employee-item">
-                                    <div class="employee-avatar">
-                                        <img src="https://i.pravatar.cc/40?img=5" alt="Stella Mary">
-                                    </div>
-                                    <div class="employee-info">
-                                        <span class="employee-name">Stella Mary</span>
-                                        <span class="employee-date">26-7-2025</span>
+                                <!-- User 3 -->
+                                <div class="list-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://i.pravatar.cc/150?img=5" class="list-avatar">
+                                        <div class="text-details ms-2">
+                                            <h6>Stella Mary</h6>
+                                            <span>26-7-2025</span>
+                                        </div>
                                     </div>
                                     <div class="employee-details">
-                                        <i class="bi bi-airplane icon ms-auto"></i>
-                                        <span class="detail-text">Annual vacation, Emergency</span>
-                                        
+                                        <div class="status-icon">
+                                            <i class="fa-solid fa-plane-up"></i>
+                                        </div>
+                                        <span class="detail-text">Annual vacations Emergency</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!-- Card 2: Birthdays -->
+                    <div class="col-12 col-lg-6 col-xl-4">
                         <div class="card-header-custom">
-                                <i class="bi bi-gift"></i>
-                                <h3 class="card-title-custom">Upcoming Birthdays</h3>
-                                <span class="card-count">3 Employees</span>
+                            <div class="d-flex align-items-center head">
+                                <div class="icon-box-header">
+                                    <i class="bi bi-cake2-fill"></i>
+                                </div>
+                                <span class="fw-bold">Upcoming Birthdays</span>
                             </div>
+                            <span class="badge-count">3 Employees</span>
+                        </div>
                         <div class="dashboard-card">
-                            
-                            
-                            <div class="card-body-custom">
-                                <div class="employee-item">
-                                    <div class="employee-avatar">
-                                        <img src="https://i.pravatar.cc/40?img=2" alt="Ahmed Mohamed">
+                            <div class="card-content scrollable-list">
+                                <!-- User 1 -->
+                                <div class="list-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://i.pravatar.cc/150?img=12" class="list-avatar">
+                                        <div class="text-details ms-2">
+                                            <h6>Ahmed Mohamed</h6>
+                                            <span>24-7-2025</span>
+                                        </div>
                                     </div>
-                                    <div class="employee-info">
-                                        <span class="employee-name">Ahmed Mohamed</span>
-                                        <span class="employee-date">24-7-2025</span>
-                                    </div>
-                                    <div class="employee-details">
+                                    <div class="employee-details no-icon">
                                         <span class="detail-text">1 Week left</span>
                                     </div>
                                 </div>
-                                <div class="employee-item">
-                                    <div class="employee-avatar">
-                                        <img src="https://i.pravatar.cc/40?img=4" alt="Mohamed Ali">
+                                <!-- User 2 -->
+                                <div class="list-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://i.pravatar.cc/150?img=59" class="list-avatar">
+                                        <div class="text-details ms-2">
+                                            <h6>Mohamed Ali</h6>
+                                            <span>2-4-2025</span>
+                                        </div>
                                     </div>
-                                    <div class="employee-info">
-                                        <span class="employee-name">Mohamed Ali</span>
-                                        <span class="employee-date">2-4-2025</span>
-                                    </div>
-                                    <div class="employee-details">
+                                    <div class="employee-details no-icon">
                                         <span class="detail-text">2 Week left</span>
                                     </div>
                                 </div>
-                                <div class="employee-item">
-                                    <div class="employee-avatar">
-                                        <img src="https://i.pravatar.cc/40?img=6" alt="Stella Mary">
+                                <!-- User 3 -->
+                                <div class="list-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://i.pravatar.cc/150?img=9" class="list-avatar">
+                                        <div class="text-details ms-2">
+                                            <h6>Stella Mary</h6>
+                                            <span>23-6-2025</span>
+                                        </div>
                                     </div>
-                                    <div class="employee-info">
-                                        <span class="employee-name">Stella Mary</span>
-                                        <span class="employee-date">23-6-2025</span>
-                                    </div>
-                                    <div class="employee-details">
+                                    <div class="employee-details no-icon">
                                         <span class="detail-text">3 Week left</span>
                                     </div>
                                 </div>
@@ -284,34 +284,34 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!-- Card 3: Approvals -->
+                    <div class="col-12 col-lg-6 col-xl-4">
                         <div class="card-header-custom">
-                                    <i class="bi bi-check-circle"></i>
-                                    <h3 class="card-title-custom">Approvals</h3>
+                            <div class="d-flex align-items-center head">
+                                <div class="icon-box-header">
+                                    <i class="bi bi-geo-alt-fill"></i>
                                 </div>
-                            <div class="dashboard-card ">
-                                
-
-                                <div class="card-body-custom">
-                                    <div class="approvals-header">
-                                        <h4 class="approvals-title">Requests Pending Approval</h4>
-                                        <p class="approvals-count">5 requests Pending</p>
-                                    </div>
-
-                                    <div class="approvals-footer">
-                                        <button class="btn-view">View</button>
-                                    </div>
-                                </div>
-
+                                <span class="fw-bold">Approvals</span>
                             </div>
+                        </div>
+                        <div class="dashboard-card approvals-card p-0 overflow-hidden d-flex flex-column">
+                            <div class="d-flex flex-column final-body  mt-3">
+                                    <div class="approvals-info-box d-flex flex-column align-items-center justify-content-center text-center">
+                                        <h5 class="title">Requests Pending Approval</h5>
+                                        <p class="count">5 requests Pending</p>
+                                    </div>
+                                    <div class="approvals-action-box text-center">
+                                        <button class="btn btn-pink rounded-pill px-5">View</button>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-                </div>
-                
-            </main>
+            </div>
         </div>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
