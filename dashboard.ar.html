@@ -95,70 +95,82 @@
         <div class="main-content">
             
             <!-- Top Header -->
-            <header class="top-header">
-                <div class="header-left d-flex align-items-center">
-                    <!-- Mobile Toggle Button -->
-                    <label for="sidebar-toggle" class="d-lg-none me-3 cursor-pointer">
-                        <i class="bi bi-list fs-3 text-purple"></i>
-                    </label>
-                    
-                    <!-- Language Switcher -->
-                    <a href="./dashboard.html" class="lang-switch d-flex align-items-center">
-                        <span>English</span>
-                        <img src="https://flagcdn.com/w20/us.png" alt="US" class="ms-2">
-                    </a>
-                </div>
+            <div class="row m-0 align-items-center header top-header">
 
-                <div class="page-title">RookieRise Portal Panel</div>
-
-                <div class="header-right d-flex align-items-center">
-                    <i class="bi bi-bell-fill bell fs-5 ms-3 cursor-pointer"></i>
-                    
-                    <!-- في ملف index.html داخل header-right -->
-
-                <div class="user-profile">
-    
-    <!-- 1. الشيك بوكس المخفي للتحكم في الفتح والإغلاق -->
-    <input type="checkbox" id="user-dropdown-toggle" class="dropdown-checkbox">
-    
-    <!-- 2. الزر الظاهر (Label) -->
-    <label for="user-dropdown-toggle" class="user-dropdown-btn d-flex align-items-center cursor-pointer">
-        
-        <!-- السهم (يظهر في اليسار في العربي) -->
-        <i class="fa-solid fa-caret-down dropdown-arrow me-2"></i>
-
-        <!-- معلومات المستخدم -->
-        <div class="user-info text-end ms-2 d-none d-sm-block">
-            <span class="user-name fw-semibold">sumerage</span>
-            <span class="user-email small d-block">yasmeen@gmail.com</span>
+    <!-- Language (Left) -->
+    <div class="col-12 col-lg-2 order-1 order-lg-1">
+        <div class="flag-container d-flex align-items-center justify-content-between">
+            <label for="sidebar-toggle" class="d-lg-none cursor-pointer">
+                <i class="bi bi-list fs-3 text-purple"></i>
+            </label>
+            <a href="./dashboard.html" class="lang-switch d-flex align-items-center">
+                <span>English</span>
+                <img src="https://flagcdn.com/w20/us.png" alt="US" class="ms-2">
+            </a>
         </div>
+    </div>
 
-        <!-- الصورة (الافاتار) -->
-        <div class="avatar-circle">SY</div>
-    </label>
+    <!-- Title / Logo (Center) -->
+    <div class="col-7 col-lg-7 order-2 order-lg-2">
+        <p class="page-title Title d-none d-lg-block text-center">RookieRise Portal Panel</p>
+        <div class="logo d-lg-none text-center">
+            <img src="./images/image.png" alt="Logo" class="mobile-logo mx-auto">
+        </div>
+    </div>
 
-    <!-- 3. القائمة المنسدلة -->
-    <ul class="custom-dropdown-menu">
-        <li>
-            <a href="#" class="d-flex align-items-center text-dark text-decoration-none p-2 rounded hover-bg">
-                <i class="bi bi-key ms-2 text-purple"></i> 
-                <span>تغيير كلمة المرور</span>
-            </a>
-        </li>
-        <li>
-            <hr class="dropdown-divider my-1">
-        </li>
-        <li>
-            <a href="#" class="d-flex align-items-center text-danger text-decoration-none p-2 rounded hover-bg">
-                <i class="bi bi-box-arrow-right ms-2"></i> 
-                <span>تسجيل خروج</span>
-            </a>
-        </li>
-    </ul>
+    <!-- User & Bell (Right) -->
+    <div class="col-5 col-lg-3 order-3 order-lg-3 header-right user-container">
+        <div class="dropdown d-flex align-items-center justify-content-between">
+            <!-- Bell Icon -->
+            <i class="bi bi-bell-fill bell fs-5 cursor-pointer"></i>
 
-                 </div>
-                </div>
-            </header>
+            <!-- User Profile -->
+            <div class="user-profile">
+                <!-- Checkbox (Hidden) -->
+                <input type="checkbox" id="user-dropdown-toggle" class="dropdown-checkbox">
+                
+                <!-- User Button -->
+                <label for="user-dropdown-toggle" class="user-dropdown-btn d-flex align-items-center cursor-pointer">
+                    <!-- Arrow -->
+                    <i class="fa-solid fa-caret-down dropdown-arrow me-2"></i>
+
+                    <!-- User Info -->
+                    <div class="user-info text-end ms-2 d-none d-sm-block">
+                        <span class="user-name fw-semibold username-text">sumerage</span>
+                        <span class="user-email small d-block">yasmeen@gmail.com</span>
+                    </div>
+
+                    <!-- Avatar -->
+                    <div class="avatar-circle avatar-container">SY</div>
+                </label>
+
+                <!-- Dropdown Menu -->
+                <ul class="custom-dropdown-menu dropdown-menu">
+                    <li>
+                        <a href="#" class="d-flex align-items-center text-dark text-decoration-none p-2 rounded dropdown-item">
+                            <i class="bi bi-key ms-2 text-purple"></i> 
+                            <span>تغيير كلمة المرور</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider my-1">
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center text-danger text-decoration-none p-2 rounded dropdown-item">
+                            <i class="bi bi-box-arrow-right ms-2"></i> 
+                            <span>الخروج</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Text Container Border -->
+            <div class="text-container"></div>
+        </div>
+    </div>
+
+</div>
+<div class="header-bottom-line"></div>
 
           <!-- Dashboard Content -->
             <div class="container-fluid p-4 dashboard-body">
