@@ -180,39 +180,111 @@ margin-top: 55px;
     transition: margin-right 0.3s ease, width 0.3s ease;
 }
 
-.top-header {
+/* ===========================
+   TOP HEADER STYLES
+   =========================== */
+.top-header,
+.header {
     background: #fff;
     padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
     margin-bottom: 20px;
     border-bottom: 1px solid #D9D9D9;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    row-gap: 10px;
 }
 
-.page-title {
+/* ===== PAGE TITLE ===== */
+.page-title,
+.Title {
+    font-family: 'Cairo', sans-serif;
     font-weight: 700;
+    font-size: 1.4rem;
     color: var(--text-dark);
-    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
 }
 
-
-.cursor-pointer { cursor: pointer; }
-.lang-switch{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #F5F4F4B2;
-    padding: 0.5rem;
-    border-radius: 10px;
+.cursor-pointer {
     cursor: pointer;
 }
 
-/* User Profile */
-.bell{
-    background-color: #7D21FE;
+/* ===== FLAG CONTAINER (Language) ===== */
+.flag-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 180px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 12px;
+    gap: 8px;
+}
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-dark);
+    background-color: #F5F4F4B2;
+}
+
+.lang-switch span {
+    font-size: 0.85rem;
+}
+
+.lang-switch img {
+    width: 18px;
+    height: auto;
+}
+
+/* Menu Toggle (Mobile) */
+.flag-container label {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== LOGO (Mobile) ===== */
+.logo,
+.mobile-logo {
+    text-align: center;
+    height: 40px;
+}
+
+.logo img,
+.mobile-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+/* ===== HEADER RIGHT (Bell & User) ===== */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+/* Bell Icon */
+.bell {
+    background-color: var(--primary-color);
     color: #fff;
     width: 30px;
     height: 30px;
@@ -221,18 +293,22 @@ margin-top: 55px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-left: 20px;
+    font-size: 1rem;
+    border: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
 }
-/* ===========================
-   User Profile Dropdown Styles
-   =========================== */
 
-/* إخفاء الشيك بوكس */
+.bell:hover {
+    background-color: #6b1fe6;
+}
+
+/* ===== USER PROFILE ===== */
 .dropdown-checkbox {
     display: none;
 }
 
-/* تنسيق حاوية البروفايل */
 .user-profile {
     position: relative;
     display: flex;
@@ -242,92 +318,62 @@ margin-top: 55px;
     background: #fff;
     border-radius: 8px;
     width: fit-content;
-    position: relative;
     box-shadow: var(--shadow);
     cursor: pointer;
 }
 
-/* تنسيق الزر القابل للضغط */
 .user-dropdown-btn {
-    /* padding: 5px; */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
     border-radius: 30px;
-    transition: all 0.3s ease-in-out;
-
-
+    transition: var(--transition);
 }
+
+.user-dropdown-btn:hover {
+    opacity: 0.8;
+}
+
+/* User Info */
 .user-info {
     display: flex;
     flex-direction: column;
     text-align: left;
+    gap: 2px;
 }
-.user-name {
+
+.user-name,
+.username-text {
+    font-family: 'Cairo', sans-serif;
     font-weight: 700;
-    color: #0A003D;
-    font-size: 18px;
+    font-size: 16px;
+    color: var(--text-dark);
+    margin: 0;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .user-email {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
-    color: #0A003D;
+    color: #999;
+    margin: 0;
 }
 
-
-
-/* تنسيق السهم وحركته */
-.dropdown-arrow {
-    transition: transform 0.3s ease;
-    font-size: 0.75rem;
-    margin-left: 0rem;
-    transition: var(--transition);
-    color: #7D21FE;
-    transform: translate(-21px, -12px);
-}
-
-
-
-/* --- القائمة المنسدلة --- */
-.custom-dropdown-menu {
-    display: none; /* مخفية افتراضياً */
-    position: absolute;
-    top: 103%;
-    left: -10px;  /* محاذاة لليسار */
-    /* min-width: 200px; */
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    padding: 10px;
-    list-style: none;
-    z-index: 1001;
-    /* border: 1px solid #eee; */
-    
-}
-
-/* عند تفعيل الشيك بوكس، إظهار القائمة */
-.dropdown-checkbox:checked ~ .custom-dropdown-menu {
-    display: block;
-}
-
-.custom-dropdown-menu a i {
-     color: #7D21FE;
-    width: 34px;
-    height: 34px;
-}
-.custom-dropdown-menu a span {
-    margin-right: 20px;
-    color: #0A003D;
-    width: 168px;
-    height: 45px;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-
-
-.avatar-circle {
+/* Avatar Circle */
+.avatar-circle,
+.avatar-container {
     width: 35px;
     height: 35px;
-    background: #7D21FE;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #a855f7 100%);
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -335,7 +381,251 @@ margin-top: 55px;
     justify-content: center;
     font-weight: bold;
     font-size: 14px;
-    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(125, 33, 254, 0.2);
+    flex-shrink: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dropdown Arrow */
+.dropdown-arrow {
+    transition: var(--transition);
+    font-size: 0.75rem;
+    margin: 0;
+    color: var(--primary-color);
+    order: -1;
+}
+
+.dropdown-checkbox:checked ~ .user-dropdown-btn .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* ===== DROPDOWN MENU ===== */
+.custom-dropdown-menu,
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 103%;
+    left: -10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    list-style: none;
+    z-index: 1001;
+    min-width: 220px;
+}
+
+.dropdown-checkbox:checked ~ .custom-dropdown-menu,
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.custom-dropdown-menu li,
+.dropdown-menu li {
+    margin: 0;
+}
+
+.custom-dropdown-menu a,
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.custom-dropdown-menu a:hover,
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.custom-dropdown-menu a i,
+.dropdown-item img {
+    color: var(--primary-color);
+    font-size: 12px;
+    width: auto;
+    height: auto;
+}
+
+.custom-dropdown-menu a.text-danger {
+    color: #dc3545;
+}
+
+.custom-dropdown-menu a.text-danger i {
+    color: #dc3545;
+}
+
+.custom-dropdown-menu a span,
+.dropdown-item {
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Text Container (Border) */
+.text-container {
+    border-left: 2px solid #F5F4F4B2;
+    border-right: 2px solid #F5F4F4B2;
+    height: 100%;
+    padding: 0 8px;
+}
+
+/* Header Bottom Line */
+.header-bottom-line {
+    width: 100%;
+    height: 1px;
+    background-color: #F5F4F4B2;
+}
+
+/* ===========================
+   RESPONSIVE - Mobile (max-width: 575px)
+   =========================== */
+@media (max-width: 575px) {
+    .top-header,
+    .header {
+        padding: 10px 12px;
+    }
+
+    .page-title,
+    .Title {
+        font-size: 1rem;
+    }
+
+    .flag-container {
+        max-width: 100%;
+        height: 28px;
+    }
+
+    .mobile-logo {
+        height: 32px;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .avatar-circle,
+    .avatar-container {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .user-name,
+    .username-text {
+        font-size: 12px;
+        max-width: 80px;
+    }
+
+    .user-email {
+        font-size: 10px;
+    }
+
+    .bell {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+
+    .custom-dropdown-menu,
+    .dropdown-menu {
+        min-width: 160px;
+    }
+}
+
+/* TABLET - Medium Screens (576px - 1280px) */
+@media (min-width: 576px) and (max-width: 1280px) {
+    .top-header,
+    .header {
+        padding: 12px 20px;
+    }
+
+    .page-title,
+    .Title {
+        font-size: 1.2rem;
+    }
+
+    .username-text {
+        font-size: 14px;
+        max-width: 100px;
+        white-space: normal;
+        line-height: 1.2;
+    }
+
+    .user-name {
+        font-size: 14px;
+    }
+
+    .user-email {
+        font-size: 11px;
+    }
+
+    .dropdown-item {
+        font-size: 14px;
+    }
+}
+
+/* DESKTOP - Large Screens (1281px+) */
+@media (min-width: 1281px) {
+    .top-header,
+    .header {
+        padding: 15px 30px;
+    }
+
+    .page-title,
+    .Title {
+        font-size: 1.4rem;
+    }
+
+    .flag-container {
+        max-width: 180px;
+        height: 32px;
+    }
+
+    .username-text {
+        font-size: 16px;
+        max-width: 140px;
+    }
+
+    .avatar-circle,
+    .avatar-container {
+        width: 35px;
+        height: 35px;
+    }
+
+    .bell {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* RTL Support */
+[dir="rtl"] .rtl-dropdown {
+    right: 0 !important;
+    left: auto !important;
+    text-align: right;
+}
+
+[dir="rtl"] .dropdown-item img {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .username-text {
+    margin-left: 8px;
+    margin-right: 0;
 }
 
 /* ===========================
@@ -696,6 +986,22 @@ border-bottom: 1px solid #eee;
     z-index: 1001;
     border: 1px solid #eee;
     }
+    .user-info {
+        display: flex !important; 
+        flex-direction: column;
+        margin-left: 5px !important;
+    }
+    
+    /* تصغير الخط قليلاً ليتناسب مع الموبايل */
+    .user-name {
+        font-size: 12px;
+    }
+    
+    .user-email {
+        font-size: 10px;
+        max-width: 80px; /* قص الإيميل لو طويل جداً */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
-
-
